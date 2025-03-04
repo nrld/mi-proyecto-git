@@ -1,0 +1,76 @@
+Ejercicio 1
+--------------------------------------------------------
+¿Qué comando debes usar para verificar la versión de Git?
+En la interfaz de línea de comandos, escribe git --version y presiona Enter. Este comando mostrará la versión actual.
+
+Si no tienes Git instalado, ¿qué opciones tienes para instalarlo?
+
+Puedo instalarlo desde la web de git
+
+La forma más oficial está disponible para ser descargada en el sitio web de Git. Solo tienes que visitar https://git-scm.com/download/win
+
+Ejercicio 2
+
+¿Qué comando usas para crear un nuevo directorio?
+
+Para crear un nuevo repositorio, usa el comando git init . git init es un comando que se utiliza una sola vez durante la configuración inicial de un repositorio nuevo. Al ejecutar este comando, se creará un nuevo subdirectorio .
+
+¿Cómo puedes cambiar a un directorio específico desde la terminal?
+Si queremos entrar a una carpeta/archivo desde el Terminal / Git Bash solo debemos utilizar el comando “cd + el nombre de la carpeta/archivo”.
+
+Ejercicio 3
+
+¿Qué comando usas para inicializar Git en un directorio?
+
+git init
+
+¿Cómo puedes confirmar que Git ha sido inicializado correctamente?
+
+Usa el comando ls -la para ver los archivos ocultos.
+
+git status:
+Este comando mostrará el estado del repositorio y confirmará que estás en la rama principal llamado master.
+
+
+Ejercicio 4
+¿Qué comando usas para comprobar el estado del repositorio?
+
+Utilizando el comando git status
+
+¿Qué significa cuando Git dice que no hay archivos rastreados?
+
+Que el repositorio está limpio y actualizado
+
+
+Ejercicio 5
+
+¿Qué comando usas para crear un archivo nuevo desde la terminal?
+
+touch README.md 
+
+¿Qué diferencia observas en el estado del repositorio después de crear el archivo?
+
+     
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+EJERCICIO 7
+¿Qué comando usas para realizar un commit?
+
+git commit -m "mensaje"
+
+¿Por qué es importante incluir un mensaje claro en cada commit?
+
+Facilita la colaboración entre desarrolladores, permitiendo entender rápidamente qué modificaciones se han hecho
+
+Facilita la generación de registros de cambios
+
+EJERCICIO 8
+
+Qué comando usas para ver el historial de commits?
+
+Se utiliza el comando git log
+
+¿Qué información muestra el historial de commits?
+Muestra
