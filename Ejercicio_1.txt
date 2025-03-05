@@ -1,76 +1,155 @@
-Ejercicio 1
---------------------------------------------------------
-¿Qué comando debes usar para verificar la versión de Git?
-En la interfaz de línea de comandos, escribe git --version y presiona Enter. Este comando mostrará la versión actual.
+**Ejercicio 1: Verificar la Instalación de Git**  
+- Comando para verificar la versión de Git: `git --version`  
+- Opciones para instalar Git: Descargar desde [git-scm.com](https://git-scm.com/) o instalar desde el gestor de paquetes del sistema operativo 
 
-Si no tienes Git instalado, ¿qué opciones tienes para instalarlo?
+**Ejercicio 2: Crear un Directorio de Trabajo**  
+- Comando para crear un nuevo directorio: `mkdir mi-proyecto-git`  
+- Comando para cambiar a un directorio específico: `cd mi-proyecto-git`
 
-Puedo instalarlo desde la web de git
+**Ejercicio 3: Inicializar un Repositorio Git**  
+- Comando para inicializar Git en un directorio: `git init`  
+- Confirmación de la inicialización: Verificar la creación del directorio oculto `.git`.
 
-La forma más oficial está disponible para ser descargada en el sitio web de Git. Solo tienes que visitar https://git-scm.com/download/win
+**Ejercicio 4: Comprobar el Estado del Repositorio**  
+- Comando para comprobar el estado del repositorio: `git status`  
+- Significado de "no hay archivos rastreados": No hay archivos que Git esté siguiendo (es decir, no se han añadido archivos).
 
-Ejercicio 2
+**Ejercicio 5: Crear un Archivo y Verificar el Estado**  
+- Comando para crear un archivo nuevo desde la terminal: `touch README.md`  
+- Diferencia en el estado del repositorio: El archivo `README.md` aparece como "untracked" (no rastreado).
 
-¿Qué comando usas para crear un nuevo directorio?
+**Ejercicio 6: Añadir un Archivo al Área de Preparación**  
+- Comando para añadir un archivo al área de preparación: `git add README.md`  
+- Significado de añadir un archivo al área de preparación: El archivo se marca para ser incluido en el próximo commit.
 
-Para crear un nuevo repositorio, usa el comando git init . git init es un comando que se utiliza una sola vez durante la configuración inicial de un repositorio nuevo. Al ejecutar este comando, se creará un nuevo subdirectorio .
+**Ejercicio 7: Realizar un Commit**  
+- Comando para realizar un commit: `git commit -m "Añadido archivo README.md"`  
+- Importancia de un mensaje claro en cada commit: Ayuda a comprender los cambios realizados en el proyecto.
 
-¿Cómo puedes cambiar a un directorio específico desde la terminal?
-Si queremos entrar a una carpeta/archivo desde el Terminal / Git Bash solo debemos utilizar el comando “cd + el nombre de la carpeta/archivo”.
+**Ejercicio 8: Ver el Historial de Commits**  
+- Comando para ver el historial de commits: `git log`  
+- Información mostrada: Identificadores de commit, autores, fechas y mensajes de commit.
 
-Ejercicio 3
+**Ejercicio 9: Crear una Nueva Rama**  
+- Comando para crear una nueva rama: `git branch nueva-caracteristica`  
+- Diferencia entre crear una rama y moverse a ella: Crear solo define la rama, mientras que moverse cambia de contexto a esa rama.
 
-¿Qué comando usas para inicializar Git en un directorio?
+**Ejercicio 10: Listar Todas las Ramas**  
+- Comando para listar todas las ramas: `git branch`  
+- Forma de identificar la rama actual: La rama actual está indicada con un asterisco.
 
-git init
+**Ejercicio 11: Cambiar a una Rama Existente**  
+- Comando para cambiar de rama: `git checkout nueva-caracteristica`  
+- Comando para confirmar la rama actual: `git branch`
 
-¿Cómo puedes confirmar que Git ha sido inicializado correctamente?
+**Ejercicio 12: Crear y Cambiar a una Nueva Rama en un Solo Paso**  
+- Comando para crear y cambiar a una nueva rama: `git checkout -b mejoras-ui`  
+- Ventaja de este comando: Permite crear y cambiar a una rama en un solo paso.
 
-Usa el comando ls -la para ver los archivos ocultos.
+**Ejercicio 13: Añadir Archivos al Área de Preparación con un Comando Abreviado**  
+- Comando abreviado para añadir todos los cambios: `git add .`  
+- Ventaja de este comando: Añade todos los cambios de manera eficiente, sin necesidad de añadir archivos individualmente.
 
-git status:
-Este comando mostrará el estado del repositorio y confirmará que estás en la rama principal llamado master.
+**Ejercicio 14: Realizar un Commit con un Mensaje Descriptivo**  
+- Comando para realizar un commit: `git commit -m "Actualización inicial de la interfaz de usuario"`  
+- Importancia de mensajes descriptivos en los commits: Proveen contexto claro sobre los cambios realizados.
 
+**Ejercicio 15: Fusionar Ramas**  
+- Comando para fusionar ramas: `git merge mejoras-ui`  
+- Qué sucede si hay conflictos: Git solicitará que se resuelvan los conflictos manualmente.
 
-Ejercicio 4
-¿Qué comando usas para comprobar el estado del repositorio?
+**Ejercicio 16: Resolver Conflictos entre Ramas**  
+- Qué ocurre con un conflicto en la fusión: Git no puede fusionar automáticamente y necesita intervención manual.  
+- Cómo resolver un conflicto: Editar el archivo para seleccionar las modificaciones correctas y luego hacer commit.
 
-Utilizando el comando git status
+**Ejercicio 17: Crear un Archivo `.gitignore`**  
+- El archivo `.gitignore` excluye ciertos archivos del seguimiento de Git, como archivos temporales.  
+- Para especificar archivos a ignorar: Se agregan patrones de archivos en el archivo `.gitignore`, como `*.log` o `*.tmp`.
 
-¿Qué significa cuando Git dice que no hay archivos rastreados?
+**Ejercicio 18: Configurar Git para Ignorar Cambios en un Archivo Específico**  
+- Comando para ignorar cambios en un archivo específico: `git update-index --assume-unchanged archivo.txt`  
+- Situaciones en que es útil: Para evitar que Git registre cambios en archivos temporales o específicos que no deben ser versionados.
 
-Que el repositorio está limpio y actualizado
+**Ejercicio 19: Clonar un Repositorio Remoto**  
+- Comando para clonar un repositorio remoto: `git clone <url_del_repositorio>`  
+- Diferencia entre clonar un repositorio y crear uno nuevo: Clonar descarga un repositorio existente, mientras que crear uno nuevo genera un repositorio vacío.
 
+**Ejercicio 20: Conectarte a GitHub con SSH**  
+- SSH es un protocolo de red seguro utilizado para conectarse a GitHub de manera cifrada.  
+- Cómo generar una clave SSH: Usar `ssh-keygen` en la terminal.
 
-Ejercicio 5
+**Ejercicio 21: Subir Cambios Locales a GitHub**  
+- Comando para asociar un repositorio local con uno remoto: `git remote add origin <url_del_repositorio>`  
+- Comando para subir cambios locales: `git push origin main`
 
-¿Qué comando usas para crear un archivo nuevo desde la terminal?
+**Ejercicio 22: Actualizar tu Repositorio Local desde GitHub**  
+- Comando para descargar cambios del repositorio remoto: `git pull origin main`  
+- Qué pasa si hay conflictos: Git solicita que resuelvas los conflictos antes de completar el pull.
 
-touch README.md 
+**Ejercicio 23: Crear una Rama en GitHub**  
+- Comando para subir una rama local a un repositorio remoto: `git push origin feature-nueva`  
+- Cómo verificar que la rama se creó correctamente en GitHub: Verificar la rama en la interfaz web de GitHub.
 
-¿Qué diferencia observas en el estado del repositorio después de crear el archivo?
+**Ejercicio 24: Eliminar una Rama Local**  
+- Comando para eliminar una rama local: `git branch -d nombre-rama`  
+- Es posible recuperar una rama eliminada si aún no se ha hecho push, usando `git reflog`.
 
-     
+**Ejercicio 25: Eliminar una Rama Remota**  
+- Comando para eliminar una rama remota: `git push origin --delete nombre-rama`  
+- Precauciones antes de eliminar una rama remota: Asegurarse de que la rama no tenga cambios importantes o que ya hayan sido fusionados.
 
-nothing added to commit but untracked files present (use "git add" to track)
+**Ejercicio 26: Crear una Pull Request en GitHub**  
+- Una pull request es una solicitud para fusionar una rama en la rama principal.  
+- Información a incluir en una pull request: Descripción clara de los cambios realizados y su justificación.
 
+**Ejercicio 27: Revisar y Comentar una Pull Request**  
+- Cómo revisar una pull request en GitHub: Navegar a la sección de pull requests y leer los cambios propuestos.  
+- Comentarios útiles: Ofrecer sugerencias constructivas y explicar por qué ciertas decisiones fueron tomadas.
 
-EJERCICIO 7
-¿Qué comando usas para realizar un commit?
+**Ejercicio 28: Fusión Automática de una Pull Request**  
+- Se puede fusionar automáticamente si no hay conflictos.  
+- Después de fusionar, los cambios se incorporan a la rama principal y la pull request se cierra.
 
-git commit -m "mensaje"
+**Ejercicio 29: Descartar Cambios Locales**  
+- Comando para descartar cambios locales: `git checkout -- archivo.txt`  
+- Cuándo es útil: Cuando se desea deshacer modificaciones no deseadas antes de hacer commit.
 
-¿Por qué es importante incluir un mensaje claro en cada commit?
+**Ejercicio 30: Restaurar un Commit Anterior**  
+- Comando para restaurar a un commit anterior: `git checkout <hash_commit>`  
+- Precauciones: Al usar este comando, es posible perder trabajo no guardado si no se hace un commit primero.
 
-Facilita la colaboración entre desarrolladores, permitiendo entender rápidamente qué modificaciones se han hecho
+**Ejercicio 31: Crear un Tag para Marcar una Versión**  
+- Un tag en Git marca un commit como una versión específica.  
+- Comando para crear un tag: `git tag v1.0 <commit_hash>`
 
-Facilita la generación de registros de cambios
+**Ejercicio 32: Listar Todos los Tags en tu Repositorio**  
+- Comando para listar tags: `git tag`  
+- Los tags son útiles para marcar versiones importantes del proyecto.
 
-EJERCICIO 8
+**Ejercicio 33: Subir Tags al Repositorio Remoto**  
+- Comando para subir tags: `git push origin --tags`  
+- Si el tag ya existe en el repositorio remoto, no se subirá nuevamente.
 
-Qué comando usas para ver el historial de commits?
+**Ejercicio 34: Descargar Tags del Repositorio Remoto**  
+- Comando para descargar tags: `git fetch --tags`  
+- Útil cuando se desea obtener todas las versiones etiquetadas del repositorio remoto.
 
-Se utiliza el comando git log
+**Ejercicio 35: Revertir un Commit**  
+- Revertir un commit crea un nuevo commit que deshace los cambios de un commit anterior.  
+- Es útil porque mantiene el historial intacto, a diferencia de eliminar un commit.
 
-¿Qué información muestra el historial de commits?
-Muestra
+**Ejercicio 36: Eliminar un Commit del Historial**  
+- Comando para eliminar un commit: `git rebase -i`  
+- Es seguro usar este comando solo en ramas locales y no compartidas.
+
+**Ejercicio 37: Comparar Ramas**  
+- Comando para comparar ramas: `git diff rama1..rama2`  
+- Muestra las diferencias entre los archivos de las dos ramas.
+
+**Ejercicio 38: Deshacer Cambios en un Archivo Específico**  
+- Comando para deshacer cambios en un archivo específico: `git checkout -- archivo.txt`  
+- Útil para deshacer cambios sin afectar otros archivos modificados.
+
+**Ejercicio 39: Usar Alias para Simplificar Comandos**  
+- Alias en Git simplifica comandos largos.  
+- Para crear un alias: `git config --global alias.st status`.
